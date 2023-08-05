@@ -33,12 +33,15 @@ export const InputFormTitle = styled.div`
   align-items: center;
 
   padding-bottom: 0.938rem;
+  
 
    > h3 {
     color: ${({theme}) => theme["base-subtitle"]};
+    font-size: 1.125em;
   }
   > span {
     color: ${({theme}) => theme["base-span"]};
+    font-size: 0.875em;
   }
 `;
 
