@@ -1,21 +1,27 @@
 import {
   ProfileContainer,
   ProfileInfoContainer,
-  ProfileTitleAndLink,
+  ProfileTitleContainer,
+  ProfileCardDescription,
+  ProfileIconsContainer,
+  AvatarContainer,
 } from "./styles";
-
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faBuilding,
+  faUserGroup,
+} from "@fortawesome/free-solid-svg-icons";
+
 const avatar = "https://avatars.githubusercontent.com/u/34512814?v=4";
 export function ProfileCard() {
   return (
     <ProfileContainer>
-      <div>
-        <img src={avatar} />
-      </div>
+      <AvatarContainer src={avatar} />
 
       <ProfileInfoContainer>
-        <ProfileTitleAndLink>
+        <ProfileTitleContainer>
           <h2>Cameron Williamson</h2>
           <span>
             <a href="https://github.com/amitcesar/">
@@ -23,16 +29,32 @@ export function ProfileCard() {
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>
           </span>
-        </ProfileTitleAndLink>
+        </ProfileTitleContainer>
+        <ProfileCardDescription>
+          <p>
+            Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
+            viverra massa quam dignissim aenean malesuada suscipit. Nunc,
+            volutpat pulvinar vel mass
+          </p>
+          <ProfileIconsContainer>
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faGithub} />
+                amitc
+              </li>
 
-        <p>
-          Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-          viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat
-          pulvinar vel mass
-        </p>
-        <span>amitc</span>
-        <span>Rocketseat</span>
-        <span>32 seguidores</span>
+              <li>
+                <FontAwesomeIcon icon={faBuilding} />
+                {"Rocketseat"}
+              </li>
+
+              <li>
+                <FontAwesomeIcon icon={faUserGroup} />
+                {"32"} seguidores
+              </li>
+            </ul>
+          </ProfileIconsContainer>
+        </ProfileCardDescription>
       </ProfileInfoContainer>
     </ProfileContainer>
   );
