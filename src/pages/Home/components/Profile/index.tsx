@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const avatar = "https://avatars.githubusercontent.com/u/34512814?v=4";
+
 export function ProfileCard() {
   return (
     <ProfileContainer>
