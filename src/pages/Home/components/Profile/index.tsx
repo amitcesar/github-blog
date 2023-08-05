@@ -28,9 +28,9 @@ export function ProfileCard() {
         <p>
           Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
           viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat
-          pulvinar vel mass.
+          pulvinar vel mass
         </p>
-        <span>brmonte</span>
+        <span>amitc</span>
         <span>Rocketseat</span>
         <span>32 seguidores</span>
       </ProfileInfoContainer>
