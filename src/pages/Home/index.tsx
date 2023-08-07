@@ -1,4 +1,5 @@
 import { ProfileCard } from "./components/Profile";
+import { Publications } from "./components/Publications";
 import { SearchPublicationsForm } from "./components/SearchPublicationsForm";
 
 export function HomePage() {
@@ -6,6 +7,7 @@ export function HomePage() {
     <div>
       <ProfileCard />
       <SearchPublicationsForm />
+      <Publications />
     </div>
   );
 }

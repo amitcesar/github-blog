@@ -15,13 +15,13 @@ export const SearchFormContainer = styled.form`
     width: 100%;
     height: 3.125rem;
     max-width: 54rem;
-    
+    color: ${({theme}) => theme["base-label"]};
     background: ${({theme}) => theme["base-input"]};
+    padding: 0.5rem;
 
     &::placeholder {
       color: ${({theme}) => theme["base-label"]};
       padding-left: 0.5rem;
-      padding: 0.625rem 0.75rem;
     }
   }
 
