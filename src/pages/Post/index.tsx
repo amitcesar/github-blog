@@ -1,3 +1,11 @@
+import { Content } from "./Content";
+import { Info } from "./Info";
+
 export function PostPage() {
-  return <h1>PostPage</h1>;
+  return (
+    <div>
+      <Info />
+      <Content />
+    </div>
+  );
 }
