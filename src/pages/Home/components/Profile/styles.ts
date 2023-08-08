@@ -59,7 +59,7 @@ export const ProfileCardDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+  max-width: 54rem;
   padding: 0.5rem 0px;
   
   > p {

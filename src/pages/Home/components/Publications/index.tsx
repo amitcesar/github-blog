@@ -6,8 +6,26 @@ import {
 } from "./styles";
 
 import { NavLink } from "react-router-dom";
+import { useCallback, useEffect } from "react";
+import { api } from "../../../../lib/axios";
+// `/search/issues?q=${query}%20label:published%20repo:${username}/${repoName}`
+
+const username = import.meta.env.VITE_GITHUB_USERNAME;
+const repoName = import.meta.env.VITE_GITHUB_REPONAME;
 
 export function Publications() {
+  const fetchPublications = useCallback(async (query: string = "") => {
+    const response = await api.get(
+      `/search/issues?q=${query}%20label:published%20repo:amitcesar/github-blog`
+    );
+
+    console.log(response);
+  }, []);
+
+  useEffect(() => {
+    fetchPublications();
+  }, [fetchPublications]);
+
   return (
     <PublicationsContainer>
       <NavLink to={"/post"}>
